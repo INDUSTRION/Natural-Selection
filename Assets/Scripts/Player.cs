@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Rigidbody rb;
-    private CharacterController controller;
+   // public Rigidbody rb;
+    public CharacterController controller;
     private Vector3 playerVelocity;
     public float playerSpeed = 5f;
 
@@ -25,7 +25,10 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = gameObject.AddComponent<CharacterController>(); 
+        controller = gameObject.AddComponent<CharacterController>();
+        controller.radius = 0.0f;
+        controller.height = 0.0f;
+
         
     }
 
