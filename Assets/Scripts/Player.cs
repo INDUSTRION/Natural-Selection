@@ -27,6 +27,6 @@ public class Player : MonoBehaviour
             gameObject.transform.forward = move;
         }
 
-        controller.Move(playerVelocity * Time.deltaTime);
+        //controller.Move(playerVelocity * Time.deltaTime);
     }
 }
