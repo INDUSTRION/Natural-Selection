@@ -66,7 +66,7 @@ public class MicroScope2 : MonoBehaviour
         {
 
 
-            SceneManager.LoadScene("Falling");
+            SceneManager.LoadScene(3);
 
 
             // Scene.SceneManger.......

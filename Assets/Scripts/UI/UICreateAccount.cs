@@ -27,7 +27,7 @@ public class UICreateAccount : MonoBehaviour
 
     public void playmode(){
 
-         SceneManager.LoadScene(1);
+         SceneManager.LoadScene(2);
     }
 
     public void CreateAccount(){
