@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class MicroScope2 : MonoBehaviour
 {
      public GameObject StartPanel;
@@ -66,7 +67,9 @@ public class MicroScope2 : MonoBehaviour
         {
 
 
-            SceneManager.LoadScene("Falling");
+           //SceneManager.LoadScene(1);
+
+            
 
 
             // Scene.SceneManger.......
