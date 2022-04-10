@@ -12,24 +12,34 @@ public class Player : MonoBehaviour
     private Vector3 movementx;
     private Vector3 movementz;
 
+    public int hp;
+
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Food")
         {
-            Debug.Log("hit");
+            Debug.Log("hit food");
             Destroy(collision.gameObject);
+            SFXManager.clip.audio.PlayOneShot(SFXManager.clip.pressed);
+        }
+        else if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("hit enemy");
+            Destroy(collision.gameObject);
+            hp--;
+            damageSound.clip.audio.PlayOneShot(damageSound.clip.pressed);
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        hp = 100;
+
         controller = gameObject.AddComponent<CharacterController>();
         controller.radius = 0.0f;
         controller.height = 0.0f;
-
-        
     }
 
     // Update is called once per frame
