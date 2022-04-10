@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD:Assets/Peter 1st Push/Prefabs/Materials/gLASS.mat
+--- !u!114 &-2619826401297369943
+=======
 --- !u!114 &-7148900571470957834
+>>>>>>> 6c9c73221670edacb4d41e68dc853d7ad688058d:Assets/Peter 1st Push/Prefabs/Materials/LabMAts/gLASS.mat
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

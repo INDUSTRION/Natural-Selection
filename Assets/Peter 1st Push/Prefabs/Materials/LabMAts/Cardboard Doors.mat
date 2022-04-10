@@ -111,7 +111,11 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
+<<<<<<< HEAD:Assets/Peter 1st Push/Prefabs/Materials/Cardboard Doors.mat
+--- !u!114 &4701493560994369716
+=======
 --- !u!114 &7678339099195230960
+>>>>>>> 6c9c73221670edacb4d41e68dc853d7ad688058d:Assets/Peter 1st Push/Prefabs/Materials/LabMAts/Cardboard Doors.mat
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
