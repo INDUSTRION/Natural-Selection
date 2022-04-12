@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
-using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
+//using UnityEditor.;
 
 public class UICreateAccount : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class UICreateAccount : MonoBehaviour
 
     public void playmode(){
 
-         SceneManager.LoadScene(2);
+         SceneManager.LoadScene(0);
     }
 
     public void CreateAccount(){
