@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -12,8 +13,14 @@ public class Player : MonoBehaviour
     private Vector3 movementx;
     private Vector3 movementz;
 
+    public GameObject popBox;
+    public Animator animator;
+   // public TMP_Text popUpText;
+
     public int hp;
 
+    private TriggerBoundary tb;
+    
 
     void OnCollisionEnter(Collision collision)
     {
@@ -30,6 +37,17 @@ public class Player : MonoBehaviour
             hp--;
             damageSound.clip.audio.PlayOneShot(damageSound.clip.pressed);
         }
+        else if (collision.gameObject.tag == "Boundary")
+        {
+            Debug.Log("hit boundary");
+
+            //Pop Up Section
+            popBox.SetActive(true);
+            animator.SetTrigger("pop");
+
+            Destroy(collision.gameObject);
+            damageSound.clip.audio.PlayOneShot(damageSound.clip.pressed);
+        }
     }
 
     // Start is called before the first frame update
@@ -40,6 +58,8 @@ public class Player : MonoBehaviour
         controller = gameObject.AddComponent<CharacterController>();
         controller.radius = 0.0f;
         controller.height = 0.0f;
+
+       // tb = gameObject.AddComponent<TriggerBoundary>(); 
     }
 
     // Update is called once per frame
@@ -52,14 +72,6 @@ public class Player : MonoBehaviour
          {
              gameObject.transform.forward = move;
          }
-
-         //controller.Move(playerVelocity * Time.deltaTime);
-
-        /*movementx = new Vector3(Input.GetAxis("Horizontal") * playerSpeed, 0, 0);
-        movementz = new Vector3(0, 0, Input.GetAxis("Vertical") * playerSpeed);
-
-        transform.Translate(movementx);
-        transform.Translate(movementz);*/
 
     }
 }
