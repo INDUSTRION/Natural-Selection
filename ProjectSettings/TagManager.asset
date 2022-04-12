@@ -17,8 +17,8 @@ TagManager:
   - UI
   - FluidMask
   - FluidLayer
-  - 
-  - 
+  - DistrotionEffect
+  - PostProcessing
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: FluidLayer
     uniqueID: 754547927
+    locked: 0
+  - name: HighestLayerForDistortionEffect
+    uniqueID: 2807056617
     locked: 0

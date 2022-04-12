@@ -5,15 +5,20 @@ using TMPro;
 
 public class TriggerBoundary : MonoBehaviour
 {
-    public GameObject popBox;
-    public Animator animator;
-    public TMP_Text popUpText;
+    
+   public bool answerQuestions()
+   {
+        bool correct = false;
 
-    public void popUpBox()
-    {
-          //t = "Yes";
-      // popBox.SetActive(true);
-       //popUpText.text = "Yes";
-     //  animator.SetTrigger("pop");
-    }
+        
+
+        if (correct)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+   }
 }

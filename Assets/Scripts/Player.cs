@@ -13,14 +13,11 @@ public class Player : MonoBehaviour
     private Vector3 movementx;
     private Vector3 movementz;
 
-    public GameObject popBox;
-    public Animator animator;
-   // public TMP_Text popUpText;
-
     public int hp;
+    public int boundaryCount = 0;
 
+    public GameObject popUpWindow;
     private TriggerBoundary tb;
-    
 
     void OnCollisionEnter(Collision collision)
     {
@@ -40,10 +37,14 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.tag == "Boundary")
         {
             Debug.Log("hit boundary");
+            popUpWindow.SetActive(true);
 
-            //Pop Up Section
-            popBox.SetActive(true);
-            animator.SetTrigger("pop");
+            boundaryCount++;
+
+            if(boundaryCount == 1)
+            {
+                
+            }
 
             Destroy(collision.gameObject);
             damageSound.clip.audio.PlayOneShot(damageSound.clip.pressed);
@@ -59,7 +60,7 @@ public class Player : MonoBehaviour
         controller.radius = 0.0f;
         controller.height = 0.0f;
 
-       // tb = gameObject.AddComponent<TriggerBoundary>(); 
+        tb = GetComponent<TriggerBoundary>();
     }
 
     // Update is called once per frame
@@ -73,5 +74,10 @@ public class Player : MonoBehaviour
              gameObject.transform.forward = move;
          }
 
+         if(popUpWindow.activeSelf == true)
+         {
+            gameObject.SetActive(false);
+            //Receive answer
+         }
     }
 }
