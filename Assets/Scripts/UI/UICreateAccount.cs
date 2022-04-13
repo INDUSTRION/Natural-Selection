@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
-using UnityEditor.SceneManagement;
-//using UnityEditor.;
 
 public class UICreateAccount : MonoBehaviour
 {
     string username, password, emailAddress;
+    bool check = true;
 
     public void updateUsername (string _username){
 
@@ -26,7 +26,8 @@ public class UICreateAccount : MonoBehaviour
         emailAddress= _emailAddress;
     }
 
-    public void playmode(){
+    public void playmode()
+    {
 
          SceneManager.LoadScene(0);
     }
@@ -37,7 +38,7 @@ public class UICreateAccount : MonoBehaviour
     }
 
     void Update(){
-        if (Input.GetKey(KeyCode.UpArrow)){
+        if (check){
 
             playmode();
         }
