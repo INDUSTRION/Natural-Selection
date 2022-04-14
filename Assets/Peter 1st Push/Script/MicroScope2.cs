@@ -67,7 +67,7 @@ public class MicroScope2 : MonoBehaviour
         {
 
 
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
 
 
             // Scene.SceneManger.......
