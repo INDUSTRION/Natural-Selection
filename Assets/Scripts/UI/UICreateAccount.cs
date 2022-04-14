@@ -29,7 +29,7 @@ public class UICreateAccount : MonoBehaviour
     public void playmode()
     {
 
-         SceneManager.LoadScene(0);
+         SceneManager.LoadScene(1);
     }
 
     public void CreateAccount(){
@@ -38,11 +38,8 @@ public class UICreateAccount : MonoBehaviour
     }
 
     void Update(){
-        if (check){
-
-            playmode();
-        }
-
+        
+            //playmode();
     }
 }
 
