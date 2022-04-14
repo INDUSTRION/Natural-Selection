@@ -77,7 +77,6 @@ public class Player : MonoBehaviour
          if(popUpWindow.activeSelf == true)
          {
             gameObject.SetActive(false);
-            //Receive answer
          }
     }
 }

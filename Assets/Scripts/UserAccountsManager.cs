@@ -49,9 +49,10 @@ public class UserAccountsManager : MonoBehaviour
 
              error =>
              {
+                 #if UNITY_EDITOR
                  EditorUtility.DisplayDialog("Error", "Unsuccessful Account Creation:+ " + username + emailAddress +"\n"+ error.ErrorMessage, "Ok");
                  Debug.Log($"Unsuccessful Account Creation: {username}, {emailAddress}\n {error.ErrorMessage}");
-
+                 #endif
              }
         );
 
