@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: cfdb79b849291544d92df0d5d70d6cfd
   - enabled: 1
-    path: Assets/Scenes/NaturalSelection.unity
+    path: Assets/Scenes/Natural Selection.unity
     guid: 9fc4a1d3ab6b8444a8ef34adf78d386b
   m_configObjects: {}
